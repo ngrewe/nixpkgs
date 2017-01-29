@@ -1,10 +1,10 @@
-{ stdenv, lib, fetchFromGitHub, cmake }:
+{ clangStdenv, lib, fetchFromGitHub, cmake }:
 
 let
   version = "1.8.1";
 in
 
-stdenv.mkDerivation rec {
+clangStdenv.mkDerivation rec {
   name = "libobjc2-${version}";
 
   src = fetchFromGitHub {
